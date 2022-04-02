@@ -1,4 +1,4 @@
-const Main = require('./lib/Main.js');
+const Main = require('./lib/Base.js');
 
 console.log('Welcome');
 
