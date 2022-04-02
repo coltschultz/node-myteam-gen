@@ -1,0 +1,22 @@
+header {
+  height: 200px;
+  color: white;
+  margin-bottom: 55px;
+}
+
+h1 {
+  padding-top: 60px;
+}
+
+.col-3 {
+  min-width: 300px;
+}
+
+.card-header {
+  background-color: blue;
+  color: white;
+}
+
+.card {
+  border-radius: 20px;
+}
