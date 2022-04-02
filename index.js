@@ -1,10 +1,9 @@
-const inquirer = require('inquirer');
-const Employee = require('./lib/Employee.js');
-const Manager = require('./lib/Manager.js');
+const Main = require('./lib/Main.js');
 
 console.log('Welcome');
 
-new Manager().askOffice();
+new Main().promptUser();
+
 
 
 
