@@ -1,18 +1,20 @@
-const popTemplate = function(employee) {
-    const icon = function() { 
-        if (employee.role === 'Manager') {
-            return `<i class="bi bi-cup-fill"></i>`;
-        } else if (employee.role === 'Engineer') {
-            return `<i class="bi bi-eyeglasses"></i>`;
-        } else if (employee.role === 'Intern') {
-            return `<i class="bi bi-person-circle"></i>`;
-        } else {
-            return ``;
-        }
+// Function to populate the Template
+const popTemplate = function (employee) {
+  // Function to choose an icon
+  const icon = function () {
+    if (employee.role === "Manager") {
+      return `<i class="bi bi-cup-fill"></i>`;
+    } else if (employee.role === "Engineer") {
+      return `<i class="bi bi-eyeglasses"></i>`;
+    } else if (employee.role === "Intern") {
+      return `<i class="bi bi-person-circle"></i>`;
+    } else {
+      return ``;
     }
-
-    return `
-    <article class="col-3">
+  };
+  // Template for Individual Employees
+  return `
+    <article class="col-12 col-md-3">
     <div class="card-deck">
         <div class="card shadow p-3 mb-5">
           <div class="card-header">
@@ -34,14 +36,17 @@ const popTemplate = function(employee) {
         </div>
     </div>
 </article>      
-`}
+`;
+};
 
-const populate = function(employee) {
-   return employee.map(popTemplate);
-}
+// Function to Populate Main Template
+const populate = function (employee) {
+  return employee.map(popTemplate);
+};
 
-module.exports = (employee) => { 
-return `
+module.exports = (employee) => {
+  // Main Template
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +56,7 @@ return `
     <title>Your Team</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="text-center bg-danger align-middle">
@@ -62,6 +67,6 @@ return `
     </section>
 </body>
 </html>
-`}
+`;
+};
 
-// <!-- ${pageData.create} -->
